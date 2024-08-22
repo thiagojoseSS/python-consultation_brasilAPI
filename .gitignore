@@ -1,3 +1,5 @@
 *.json
 *.csv
-/.venv/
+.venv/
+.idea/
+__pycache__/
