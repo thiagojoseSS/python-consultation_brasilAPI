@@ -49,8 +49,10 @@ for idx, cnpj in enumerate(lista_cnpjs):
             root = avl.insert(root, result[0], result[1])
             json_resultados.append(result[1])
             print(f"Consultado: {idx}")
-            if str(item) == '404':
-                print(f"CNPJ: {cnpj} -> Não foi encontrado na API!")
+            if str(result[1]) == '404':
+                print(f"CNPJ: {cnpj} ---- Não foi encontrado na API!")
+            else:
+                print(f"CNPJ: {cnpj} ---- Consultado com Sucesso!")
             if (x % 10) == 0:
                 print("Pausa de 1 segundo")
                 sleep(1)
